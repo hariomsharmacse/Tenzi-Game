@@ -14,9 +14,9 @@ boxes.forEach((box) => {
         // if(!ids.includes(box.id)){
           if(!ids.includes(box.id)){
           ids.push(box.getAttribute('id'));
-          // console.log(ids);
+          console.log(ids);
         value.push(box.innerText);
-        // console.log(value);
+        console.log(value);
         box.style.backgroundColor = 'lightgreen';
       }else{
         
@@ -26,10 +26,10 @@ boxes.forEach((box) => {
         
         
         ids.splice(indexNum, 1);
-        // console.log(ids);
+        console.log(ids);
         
         value.splice(indexNum, 1);
-        // console.log(value)
+        console.log(value)
         
           box.style.backgroundColor = '#f0f0f0';
         
@@ -40,7 +40,27 @@ boxes.forEach((box) => {
        if(value.length === 10){
         if(value[0] === value[1] && value[2] === value[3] && value[4] === value[5] && value[6] === value[7] && value[8] === value[9] && value[1] === value[2] && value[3] === value[4] && value[5] === value[6] && value[7] === value[8] && value[0] === value[9]){
           console.log('You Win');
-          const end = Date.now() + 15 * 100000;
+          boxes.forEach((box) => {
+            box.disabled = true;
+          })
+          rollBtn.innerText = "New Game";
+   
+          let end = Date.now() + 15 * 100000;
+
+          rollBtn.addEventListener('click', () => {
+            boxes.forEach((box) => {
+              box.disabled = false;
+              box.style.backgroundColor = '#f0f0f0';
+              let random = Math.floor(Math.random() * 10);
+          box.innerText = random;
+            })
+            rollBtn.innerText = "Roll";
+            
+          ids = [];
+          value = []; 
+          end = 0;
+
+          })
 
 // go Buckeyes!
 const colors = ["#bb0000", "#ffffff"];
@@ -49,7 +69,7 @@ const colors = ["#bb0000", "#ffffff"];
   confetti({
     particleCount: 2,
     angle: 60,
-    spread: 55,
+    spread: 57,
     origin: { x: 0 },
     colors: colors,
   });
@@ -57,7 +77,7 @@ const colors = ["#bb0000", "#ffffff"];
   confetti({
     particleCount: 2,
     angle: 120,
-    spread: 55,
+    spread: 57,
     origin: { x: 1 },
     colors: colors,
   });
