@@ -45,23 +45,12 @@ boxes.forEach((box) => {
           })
           rollBtn.innerText = "New Game";
    
-          let end = Date.now() + 15 * 100000;
-
+          
           rollBtn.addEventListener('click', () => {
-            boxes.forEach((box) => {
-              box.disabled = false;
-              box.style.backgroundColor = '#f0f0f0';
-              let random = Math.floor(Math.random() * 10);
-          box.innerText = random;
-            })
-            rollBtn.innerText = "Roll";
-            
-          ids = [];
-          value = []; 
-          end = 0;
-
+            window.location.reload(true);
           })
-
+          
+          const end = Date.now() + 15 * 100000;
 // go Buckeyes!
 const colors = ["#bb0000", "#ffffff"];
 
