@@ -7,10 +7,36 @@ let value = [];
 
 boxes.forEach((box) => {
     box.addEventListener('click', () => {
-       box.style.backgroundColor = 'red';
-       ids.push(box.getAttribute('id'));
-       value.push(box.innerText);
-       box.disabled = true;
+      //  ids.push(box.getAttribute('id'));
+      //  value.push(box.innerText);
+      //  box.disabled = true;
+      // console.log(window.getComputedStyle(box).backgroundColor)
+        // if(!ids.includes(box.id)){
+          if(!ids.includes(box.id)){
+          ids.push(box.getAttribute('id'));
+          // console.log(ids);
+        value.push(box.innerText);
+        // console.log(value);
+        box.style.backgroundColor = 'lightgreen';
+      }else{
+        
+         
+        const indexNum = ids.indexOf(box.getAttribute('id'));
+        console.log(indexNum)
+        
+        
+        ids.splice(indexNum, 1);
+        // console.log(ids);
+        
+        value.splice(indexNum, 1);
+        // console.log(value)
+        
+          box.style.backgroundColor = '#f0f0f0';
+        
+
+      }
+      
+      
        if(value.length === 10){
         if(value[0] === value[1] && value[2] === value[3] && value[4] === value[5] && value[6] === value[7] && value[8] === value[9] && value[1] === value[2] && value[3] === value[4] && value[5] === value[6] && value[7] === value[8] && value[0] === value[9]){
           console.log('You Win');
