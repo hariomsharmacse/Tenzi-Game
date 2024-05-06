@@ -5,6 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #0b2434;
+    font-family: sans-serif;
 }
 
 .container{
@@ -85,4 +86,12 @@ p{
         border: none;
         color: black;
     }
+
+    h1{
+    font-size: 34px;
+}
+
+p{
+    font-size: 19px;
+}
 }
