@@ -69,7 +69,7 @@ p{
 
 @media only screen and (max-width:650px){
         .container{
-            width: 96%;
+            width: 90%;
             height: 26rem;
 
     }
@@ -89,7 +89,7 @@ p{
 
 @media only screen and (max-width:450px){
     .container{
-        width: 96%;
+        width: 90%;
         height: 23rem;
 
 }
