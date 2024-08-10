@@ -67,25 +67,15 @@ p{
     border: none;
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:650px){
         .container{
             width: 27rem;
             height: 26rem;
-            text-align: center;
-            border-radius: 6px;
-            padding: 10px;
 
     }
     
     .box{
-        /* width: 50px;
-        height: 50px; */
-        border: 2px solid black;
-        border-radius: 7px;
         font-size: 27px;
-        box-shadow: 1px 1px 1px black;
-        border: none;
-        color: black;
     }
 
     h1{
@@ -95,4 +85,40 @@ p{
 p{
     font-size: 19px;
 }
+}
+
+@media only screen and (max-width:450px){
+    .container{
+        width: 20rem;
+        height: 23rem;
+
+}
+
+.box{
+    width: 45px;
+    height: 40px;
+    font-size: 21px;
+}
+
+h1{
+font-size: 28px;
+}
+
+p{
+font-size: 16px;
+}
+
+#game-btn{
+    padding: 10px 38px;
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+.main{
+    width: 280px;
+    height: 120px;
+    gap: 10px;
+    margin-top: 5px;
+}
+
 }
